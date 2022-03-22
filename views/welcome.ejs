@@ -1,0 +1,15 @@
+<%- include('includes/head.ejs') %>
+</head>
+
+<body>
+	<% if(newUser) { %>
+		<h1 class="mb-4 text-center" style="font-size: 70px; padding-top: 200px; "> <%= newUser %> Welcome to our website!
+			<br> Please Log in to continue </h1>
+		<div class=" row justify-content-center col-md-6 col-lg-4 d-flex text-center" >
+			<a href="/login" class="social login-wrap"><span class="ion-logo-facebook mr-2"></span> SING IN</a>
+		</div>
+		<% } else {%>
+		<script>window.localStorage.setItem('token', '<%= token %>' ) </script>
+    <h1 class="mb-4 text-center" style="font-size: 70px; padding-top: 200px; ">Welcome to our website!</h1>
+	 <% } %>
+<%- include('includes/end.ejs') %>

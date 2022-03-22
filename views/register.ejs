@@ -1,0 +1,49 @@
+<%- include('includes/head.ejs') %>
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Register</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+		      	<form action="/register" method="post" class="signin-form"> 
+		      		<div class="form-group">
+		      			<input name='username' type="text" class="form-control" placeholder="Username" required>
+		      		</div>
+						<div class="form-group">
+		      			<input name="name" type="text" class="form-control" placeholder="Full Name" required>
+		      		</div>
+						<div class="form-group">
+		      			<input name="email" type="text" class="form-control" placeholder="Email" required>
+		      		</div>
+	            <div class="form-group">
+	              <input name="password" id="password-field" type="password" class="form-control" placeholder="Password" required>
+	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+	            </div>
+					<div class="form-group">
+						<input name="rePassword"  id="password-field-1" type="password" class="form-control" placeholder="Repeat Password" required>
+						<span toggle="#password-field-1" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+					 </div>
+						<% if (msg) { %>
+							<div style="font-size: 17px;color: rgb(255, 0, 0); padding: 0px 0px 10px 25px;" ><%= msg %>!</div>
+							<% }  %>
+	            <div class="form-group">
+	            	<button type="submit" class="form-control btn btn-primary submit px-3">Sign up</button>
+	            </div>
+	          </form>
+	          <p class="w-100 text-center">&mdash; Or Sign in &mdash;</p>
+	          <div class="social d-flex text-center">
+	          	<a href="/login" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> SING IN</a>
+	          </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<%- include('includes/end.ejs') %>
+
+
